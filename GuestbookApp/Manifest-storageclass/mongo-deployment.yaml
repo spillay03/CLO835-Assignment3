@@ -32,8 +32,9 @@ spec:
           protocol: TCP
         volumeMounts:
         - mountPath: /data
-          name: mongodb-pv
+          name: mongo-data
       volumes:
-      - name: mongodb-pv
-        hostPath:
-          path: /tmp/mongodb
+        - name: mongo-data
+          persistentVolumeClaim:
+            claimName: mongo-pvc-sc
+      

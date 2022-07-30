@@ -1,0 +1,16 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: standard
+# AWS EBS Storage
+provisioner: kubernetes.io/aws-ebs
+parameters:
+  type: gp2
+# reclaimPolicy: Delete
+reclaimPolicy: Retain
+allowVolumeExpansion: true
+mountOptions:
+  - debug
+# Uncomment the following line if you need to bind the volume Immediately 
+# volumeBindingMode: Immediate
+volumeBindingMode: WaitForFirstConsumer

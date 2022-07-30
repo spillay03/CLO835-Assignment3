@@ -1,13 +1,11 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongodb-pv
-  labels:
-    app.kubernetes.io/name: mongo
-    app.kubernetes.io/component: backend
+  name: mongo-pvc-hp
 spec:
+  storageClassName: localstorage
   capacity: 
-    storage: 1Gi
+    storage: 4Gi
   accessModes:
     - ReadWriteOnce
     - ReadOnlyMany
