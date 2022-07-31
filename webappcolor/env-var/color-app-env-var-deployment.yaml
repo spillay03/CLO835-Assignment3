@@ -10,7 +10,7 @@ spec:
     env:
     # It will accept APP_COLOR as environment variable (Line 39 app.py)
     - name: APP_COLOR
-      value: "blue"
+      value: "darkblue"
 
     name: color-app-configmap
     ports:
