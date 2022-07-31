@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: colorapp-config
 data:
-  COLOR_ENV: "red"
+  COLOR_ENV: "blue"

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: colorapp-configmap-svc
+  labels:
+    app: colorapp
+spec:
+  # if your cluster supports it, uncomment the following to automatically create
+  # an external load-balanced IP for the frontend service.
+  type: NodePort
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 32765
+  selector:
+    app: colorapp

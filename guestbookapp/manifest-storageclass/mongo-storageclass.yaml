@@ -2,11 +2,11 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: standard
-# AWS EBS Storage
+# Use AWS EBS Storage
 provisioner: kubernetes.io/aws-ebs
 parameters:
   type: gp2
-# reclaimPolicy: Delete
+# Set reclaimPolicy: Delete
 reclaimPolicy: Retain
 allowVolumeExpansion: true
 mountOptions:
